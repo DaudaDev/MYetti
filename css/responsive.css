@@ -4,7 +4,23 @@ Author Name: Naimur Rahman
 Website: http://wpthemesgrid.com/
 Description: Mediplus - Doctor HTML Template.
 Version:	1.1
-========================================*/   
+========================================*/
+.slider .single-slider:before{
+	position:absolute;
+	content:"";
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background:#fff;
+	opacity:0.7;
+}
+hr.home-hr {
+	border: none;           /* Remove default border */
+	height: 2px;            /* Set thickness */
+	background-color: #1a76d1; /* Set color */
+	margin-top: 0;
+}
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 /* Header Sticky */
