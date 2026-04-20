@@ -42,6 +42,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+    <style>
+        .myet-pyramid {
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto 0;
+        }
+        .myet-pyramid svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .myet-pyramid__labels text { font-size: 22px; }
+        }
+    </style>
+
 </head>
 <body>
 
@@ -160,13 +176,84 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="infogram-embed" data-id="4908dee3-f4c0-4c2d-ba0d-a0e00de652ec" data-type="interactive" data-title="MChart"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/4908dee3-f4c0-4c2d-ba0d-a0e00de652ec" style="color:#989898!important;text-decoration:none!important;" target="_blank">MChart</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+                <div class="myet-pyramid">
+                    <svg viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="myet-pyramid-title myet-pyramid-desc">
+                        <title id="myet-pyramid-title">MYET Impact Pyramid</title>
+                        <desc id="myet-pyramid-desc">Four tiers representing MYET outcomes: Unity and Faith at the foundation, Education and Entrepreneurship, Financial Stability and Health, culminating in Community Impact.</desc>
+
+                        <g class="myet-pyramid__dividers" stroke="#d9d9d9" stroke-width="1" stroke-dasharray="2 3">
+                            <line x1="60" y1="180" x2="656" y2="180"/>
+                            <line x1="60" y1="320" x2="587" y2="320"/>
+                            <line x1="60" y1="460" x2="518" y2="460"/>
+                            <line x1="60" y1="600" x2="450" y2="600"/>
+                        </g>
+
+                        <g class="myet-pyramid__labels" font-family="Poppins, Arial, sans-serif" font-size="18" fill="#333">
+                            <text x="70" y="115">Community Impact</text>
+                            <text x="70" y="255">Financial Stability / Healthy Population</text>
+                            <text x="70" y="388">High-Quality Education and Vibrant</text>
+                            <text x="70" y="412">Entrepreneurs</text>
+                            <text x="70" y="535">Unity, Togetherness, Resilient Faith</text>
+                        </g>
+
+                        <g class="myet-pyramid__tiers">
+                            <polygon fill="#B94A48" points="725,40 793.75,180 656.25,180"/>
+                            <polygon fill="#A071C7" points="656.25,180 793.75,180 862.5,320 587.5,320"/>
+                            <polygon fill="#5DC8E0" points="587.5,320 862.5,320 931.25,460 518.75,460"/>
+                            <polygon fill="#3A7FD1" points="518.75,460 931.25,460 1000,600 450,600"/>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- End Portfolio Details Area -->
 
+<!-- Start Fun-facts -->
+<div id="fun-facts" class="fun-facts section overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-fun">
+                    <i class="icofont icofont-graduate-alt"></i>
+                    <div class="content">
+                        <span class="counter">120</span>
+                        <p>Students Sponsored</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-fun">
+                    <i class="icofont icofont-users-alt-3"></i>
+                    <div class="content">
+                        <span class="counter">45</span>
+                        <p>Active Mentors</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-fun">
+                    <i class="icofont-location-pin"></i>
+                    <div class="content">
+                        <span class="counter">3</span>
+                        <p>States Served</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="single-fun">
+                    <i class="icofont icofont-calendar"></i>
+                    <div class="content">
+                        <span class="counter">10</span>
+                        <p>Years Impacting Lives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ End Fun-facts -->
 
 <!-- Footer Area -->
 <footer id="footer" class="footer ">
