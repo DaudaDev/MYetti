@@ -435,6 +435,9 @@ body{
 	position: absolute;
 	left:-20px;
 	top: 100%;
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
 	z-index: 999;
 	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
@@ -4261,7 +4264,10 @@ body{
 	font-weight: 500;
 }
 .home-hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 48px; position: relative; z-index: 4; }
-.home-hero__ctas .btn {
+.home-hero__ctas .btn,
+.home-hero__ctas .btn:link,
+.home-hero__ctas .btn:visited,
+.home-hero__ctas .btn:active {
 	padding: 16px 36px;
 	font-size: 14px;
 	font-weight: 700;
@@ -4279,14 +4285,27 @@ body{
 	position: relative;
 	z-index: 1;
 }
-.home-hero__ctas .btn.primary {
+.home-hero__ctas .btn.primary,
+.home-hero__ctas .btn.primary:link,
+.home-hero__ctas .btn.primary:visited,
+.home-hero__ctas .btn.primary:active {
 	background: #FDD35C;
 	color: #0a1c38;
 	border-color: #FDD35C;
 }
-.home-hero__ctas .btn:hover {
+.home-hero__ctas .btn:hover,
+.home-hero__ctas .btn:focus {
 	transform: translateY(-2px);
 	box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+	color: #fff;
+	background: #1462b0;
+	border-color: #1462b0;
+}
+.home-hero__ctas .btn.primary:hover,
+.home-hero__ctas .btn.primary:focus {
+	color: #0a1c38;
+	background: #fcc72e;
+	border-color: #fcc72e;
 }
 .home-hero__trust {
 	font-size: 13px;
