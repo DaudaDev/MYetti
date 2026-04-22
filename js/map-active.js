@@ -1,80 +1,29 @@
 $(document).ready(function(){
 /*====================================
-	Google Map JS
-======================================*/ 	
+	OpenStreetMap (Leaflet)
+=====================================*/ 	
 (function(){
 
-	var map;
-	map = new GMaps({
-		el: '#myMap',
-		lat: 51.507351,
-		lng: -0.127758,
-		scrollwheel:false,
+	var map = L.map('myMap', {
+		center: [51.507351, -0.127758],
 		zoom: 15,
-		zoomControl : false,
-		panControl : false,
-		streetViewControl : true,
-		mapTypeControl: false,
-		overviewMapControl: false,
-		clickable: false
+		scrollWheelZoom: false,
+		zoomControl: true
 	});
 
-	var image = 'img/map-marker.png';
-	map.addMarker({
-		lat: 51.507351,
-		lng: -0.127758,
-		icon: image,
-		animation: google.maps.Animation.DROP,
-		verticalAlign: 'bottom',
-		horizontalAlign: 'left',
-		backgroundColor: '#efece0',
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
+	}).addTo(map);
+
+	var markerIcon = L.icon({
+		iconUrl: 'img/map-marker.png',
+		iconSize: [32, 42],
+		iconAnchor: [16, 42],
+		popupAnchor: [0, -42]
 	});
 
-	var styles = [
+	L.marker([51.507351, -0.127758], {icon: markerIcon}).addTo(map);
 
-		{
-			"featureType": "road",
-			"stylers": [
-				{ "color": "#ffffff" }
-			]
-		},{
-			"featureType": "water",
-			"stylers": [
-				{ "color": "#bde5f6" }
-			]
-		 },{
-		  "featureType": "landscape",
-			 "stylers": [
-			 { "color": "#f2f2f2" }
-			 ]
-		},{
-			"elementType": "labels.text.fill",
-			"stylers": [
-				{ "color": "#FF7550" }
-			]
-		},{
-			"featureType": "poi",
-			"stylers": [
-			 { "color": "#e2f0cd" }
-			]
-		},{
-			"elementType": "labels.text",
-			"stylers": [
-				{ "saturation": 2 },
-				{ "weight": 0.3},
-				{ "color": "#a8a8a8" }
-			]
-		}
-
-	];
-
-	 map.addStyle({
-		styledMapName:"Styled Map",
-		styles: styles,
-		mapTypeId: "map_style"
-	});
-
-	map.setStyle("map_style");
 }());
 
 });
